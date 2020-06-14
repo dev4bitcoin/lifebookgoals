@@ -1,0 +1,35 @@
+.site-footer {
+
+  .nav-link {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    color: lighten($gray-700, 5%);
+    text-transform: uppercase;
+    border-right: 1px solid $gray-700;
+
+    &:hover {
+      color: darken($gray-300, 5%);
+    }
+  }
+
+  .nav-item:last-child {
+    .nav-link {
+      border-right: 0;
+    }
+  }
+
+  .copy {
+    border-top: 1px solid $gray-900;
+    text-align: center;
+    color: lighten($gray-700, 5%);
+    text-transform: uppercase;
+    max-width: 800px;
+    margin: 0 auto;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    font-size: 90%;
+  }
+
+}

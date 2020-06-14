@@ -1,0 +1,77 @@
+$white:    #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+$blue:    #2780E3;
+$indigo:  #6610f2;
+$purple:  #613d7c;
+$pink:    #e83e8c;
+$red:     #FF0039;
+$orange:  #f0ad4e;
+$yellow:  #FF7518;
+$green:   #3FB618;
+$teal:    #20c997;
+$cyan:    #9954BB;
+
+// Colors
+$theme-colors: (
+  primary: $blue,
+  secondary: $gray-600,
+  success: $green,
+  info: $cyan,
+  warning: $yellow,
+  danger: $red,
+  light: $gray-100,
+  dark: $gray-800,
+  darkest: $black
+);
+
+// Fonts
+$font-family-sans-serif: 'PT Sans Caption', sans-serif;
+$font-family-serif:      'PT Serif', serif;
+$font-family-base:       $font-family-sans-serif;
+
+// Headings
+$headings-font-family:   $font-family-serif;
+$headings-font-weight:   700;
+
+// Font sizes
+$font-size-base: .875rem;
+
+// Grid
+$grid-gutter-width: 20px;
+
+$container-max-widths: (
+  sm: 540px,
+  md: 720px,
+  lg: 960px,
+  xl: 1220px
+);
+
+// Border radius
+$border-radius:          0;
+$border-radius-lg:       0;
+$border-radius-sm:       0;
+
+// Cards
+$card-border-width: 0;
+$card-cap-bg: $white;
+$card-bg: transparent;
+$card-border-radius: $border-radius;
+$card-spacer-x: 1.5rem;
+
+// Forms
+$input-focus-border-color: $gray-800;
+
+// Alerts
+$alert-bg-level:                    -9;
+$alert-border-level:                -6;
+$alert-color-level:                 6;

@@ -1,0 +1,49 @@
+.site-instagram {
+  overflow: hidden;
+  text-align: center;
+  position: relative;
+
+  .photo {
+    position: relative;
+    transition: all .25s ease-in-out;
+    display: block;
+
+    &:after {
+      content: " ";
+      background: rgba(0, 0, 0, .25);
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 0;
+      user-select: none;
+    }
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    &:hover {
+      transform: scale(1.05);
+
+      &:after {
+        background: rgba(0, 0, 0, .125);
+      }
+    }
+  }
+
+  .action {
+    position: absolute;
+    z-index: 99;
+    margin: 0 auto;
+    text-align: center;
+    top: 50%;
+    margin-top: -12px;
+    width: 100%;
+    height: 0;
+  }
+
+}

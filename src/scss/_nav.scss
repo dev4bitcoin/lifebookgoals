@@ -1,0 +1,8 @@
+.nav-tabs .nav-link {
+  &,
+  &.active {
+    border-radius: .25rem;
+    border-color: $gray-300;
+    margin-right: .5rem;
+  }
+}

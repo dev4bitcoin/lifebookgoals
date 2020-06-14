@@ -1,0 +1,37 @@
+.navbar {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+  &-brand {
+    font-family: $font-family-serif;
+    text-transform: lowercase;
+    font-weight: 700;
+  }
+
+  &,
+  * {
+    transition: all .25s ease-in-out;
+  }
+
+  .search {
+    width: 114px;
+  }
+
+  .search:focus {
+    width: 300px;
+    content: "Type here"
+  }
+}
+
+.navbar-dark {
+  .search {
+    background: transparent;
+    border: 1px solid $gray-300;
+    color: $gray-100;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .navbar-brand {
+    font-size: 2.5rem;
+  }
+}

@@ -1,0 +1,15 @@
+.form-control-rounded {
+  border-radius: 1rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+}
+
+label {
+  font-weight: bold;
+}
+
+.inputCheckbox {
+  display: -webkit-box;
+}
