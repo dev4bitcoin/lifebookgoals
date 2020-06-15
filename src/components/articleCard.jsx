@@ -24,7 +24,7 @@ class ArticleCard extends Component {
                 <Link
                   key={tag._id}
                   to={{
-                    pathname: articlePathName,
+                    pathname: `/tag/${tag.name}`,
                     state: tag,
                   }}
                 >

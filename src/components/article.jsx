@@ -110,47 +110,49 @@ class Article extends Component {
               </div>
             </article>
 
-            <div className="d-flex mt-3 mb-3 p-2 alert-secondary border border-secondary">
-              <div className="w-50">
-                {previousArticle && (
-                  <Fragment>
-                    <i className="mr-2 fas fa-angle-left"></i>
-                    <Link
-                      to={{
-                        pathname: `/article/${previousArticle.title.replace(
-                          / /g,
-                          "-"
-                        )}`,
-                        state: previousArticle._id,
-                      }}
-                      className="text-dark font-weight-bold"
-                    >
-                      Previous Post
-                    </Link>
-                  </Fragment>
-                )}
-              </div>
+            {(previousArticle || nextArticle) && (
+              <div className="d-flex mt-3 mb-3 p-2 alert-secondary border border-secondary">
+                <div className="w-50">
+                  {previousArticle && (
+                    <Fragment>
+                      <i className="mr-2 fas fa-angle-left"></i>
+                      <Link
+                        to={{
+                          pathname: `/article/${previousArticle.title.replace(
+                            / /g,
+                            "-"
+                          )}`,
+                          state: previousArticle._id,
+                        }}
+                        className="text-dark font-weight-bold"
+                      >
+                        Previous Post
+                      </Link>
+                    </Fragment>
+                  )}
+                </div>
 
-              <div className="w-50 text-right">
-                {nextArticle && (
-                  <Fragment>
-                    <Link
-                      to={{
-                        pathname: `/article/${nextArticle.title.replace(
-                          / /g,
-                          "-"
-                        )}`,
-                        state: nextArticle._id,
-                      }}
-                      className="text-dark font-weight-bold"
-                    >
-                      Next Post
-                    </Link>
-                    <i className="mr-2 fas fa-fw fa-angle-right"></i>
-                  </Fragment>
-                )}
+                <div className="w-50 text-right">
+                  {nextArticle && (
+                    <Fragment>
+                      <Link
+                        to={{
+                          pathname: `/article/${nextArticle.title.replace(
+                            / /g,
+                            "-"
+                          )}`,
+                          state: nextArticle._id,
+                        }}
+                        className="text-dark font-weight-bold"
+                      >
+                        Next Post
+                      </Link>
+                      <i className="mr-2 fas fa-fw fa-angle-right"></i>
+                    </Fragment>
+                  )}
+                </div>
               </div>
-            </div>
+            )}
             {article.relatedArticles && article.relatedArticles.length !== 0 && (
               <div className="mt-4">
                 <h3>Recommended Posts</h3>
