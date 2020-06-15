@@ -1,7 +1,6 @@
 import http from "./httpService";
-import { apiUrl } from "./config.json";
 
-const apiEndpoint = apiUrl + "/tags";
+const apiEndpoint = "/tags";
 
 export async function getTags() {
   return await http.get(apiEndpoint);

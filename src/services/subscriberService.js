@@ -1,7 +1,6 @@
 import http from "./httpService";
-import { apiUrl } from "./config.json";
 
-const apiEndpoint = apiUrl + "/subscribers";
+const apiEndpoint = "/subscribers";
 
 export async function getSubscribers() {
   return await http.get(apiEndpoint);
