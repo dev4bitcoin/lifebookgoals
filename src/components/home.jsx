@@ -13,6 +13,7 @@ class Home extends Component {
     currentPage: 1,
     pageSize: 6,
     totalCount: 0,
+    showPaging: false,
   };
 
   async componentDidMount() {
@@ -30,6 +31,7 @@ class Home extends Component {
       articles: articles,
       featuredArticles: featuredArticles,
       totalCount: totalCount,
+      showPaging: totalCount > 6 ? true : false,
     });
   }
 
@@ -54,6 +56,7 @@ class Home extends Component {
       pageSize,
       totalCount,
       articles,
+      showPaging,
     } = this.state;
 
     return (
@@ -87,7 +90,7 @@ class Home extends Component {
                   </Fragment>
                 </div>
                 <div className="d-flex justify-content-center">
-                  {articles.length !== 0 && (
+                  {articles.length !== 0 && showPaging && (
                     <Pagination
                       firstPageText={
                         <i className="align-middle mr-2 fas fa-angle-double-left"></i>

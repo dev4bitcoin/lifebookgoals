@@ -11,6 +11,7 @@ class PostsByTag extends Component {
     currentPage: 1,
     pageSize: 6,
     totalCount: 0,
+    showPaging: false,
   };
 
   componentWillMount() {
@@ -29,7 +30,7 @@ class PostsByTag extends Component {
 
     const { articles } = result.data;
 
-    this.setState({ articles });
+    this.setState({ articles, showPaging: articles.length > 6 ? true : false });
   };
 
   async populateArticle() {
@@ -73,7 +74,13 @@ class PostsByTag extends Component {
   };
 
   render() {
-    const { currentPage, pageSize, totalCount, articles } = this.state;
+    const {
+      currentPage,
+      pageSize,
+      totalCount,
+      articles,
+      showPaging,
+    } = this.state;
     return (
       <Fragment>
         <div className="container">
@@ -93,26 +100,28 @@ class PostsByTag extends Component {
                     ))}
                   </div>
                   <div className="mt-3 mb-3 d-flex justify-content-center">
-                    <Pagination
-                      firstPageText={
-                        <i className="align-middle mr-2 fas fa-angle-double-left"></i>
-                      }
-                      lastPageText={
-                        <i className="align-middle mr-2 fas fa-angle-double-right"></i>
-                      }
-                      prevPageText={
-                        <i className="align-middle mr-2 fas fa-angle-left"></i>
-                      }
-                      nextPageText={
-                        <i className="align-middle mr-2 fas fa-angle-right"></i>
-                      }
-                      itemClass="page-item"
-                      linkClass="page-link"
-                      activePage={currentPage}
-                      itemsCountPerPage={pageSize}
-                      totalItemsCount={totalCount}
-                      onChange={this.handlePageChange}
-                    />
+                    {articles.length !== 0 && showPaging && (
+                      <Pagination
+                        firstPageText={
+                          <i className="align-middle mr-2 fas fa-angle-double-left"></i>
+                        }
+                        lastPageText={
+                          <i className="align-middle mr-2 fas fa-angle-double-right"></i>
+                        }
+                        prevPageText={
+                          <i className="align-middle mr-2 fas fa-angle-left"></i>
+                        }
+                        nextPageText={
+                          <i className="align-middle mr-2 fas fa-angle-right"></i>
+                        }
+                        itemClass="page-item"
+                        linkClass="page-link"
+                        activePage={currentPage}
+                        itemsCountPerPage={pageSize}
+                        totalItemsCount={totalCount}
+                        onChange={this.handlePageChange}
+                      />
+                    )}
                   </div>
                 </Fragment>
               )}
