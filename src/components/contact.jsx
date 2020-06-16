@@ -18,9 +18,9 @@ const Contact = () => {
                 <strong>Email: </strong>
                 <a
                   className="anchor-email-link"
-                  href="mailto:lifebookgoals@gmail.com"
+                  href="mailto:contact@lifebookgoals.com"
                 >
-                  lifebookgoals@gmail.com
+                  contact@lifebookgoals.com
                 </a>
               </p>
               <p>
