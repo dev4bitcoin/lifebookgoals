@@ -81,13 +81,13 @@ class Home extends Component {
                       ))}
                     </Fragment>
                   )}
-                  <Fragment>
+                  {/* <Fragment>
                     {articles.length === 0 && (
                       <div className="w-100 text-center">
                         There are no articles posted yet!
                       </div>
                     )}
-                  </Fragment>
+                  </Fragment> */}
                 </div>
                 <div className="d-flex justify-content-center">
                   {articles.length !== 0 && showPaging && (
