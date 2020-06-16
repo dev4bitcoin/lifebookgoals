@@ -31,11 +31,11 @@ const NavBar = ({ user }) => {
                 Archives
               </a>
             </li>
-            {/* <li className="nav-item">
+            <li className="nav-item">
               <a className="nav-link" href="/contact" id="contactLink">
                 Contact
               </a>
-            </li> */}
+            </li>
             {user && (
               <React.Fragment>
                 <li className="nav-item dropdown">
