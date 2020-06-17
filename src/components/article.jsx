@@ -11,9 +11,6 @@ import RelatedArticles from "./relatedArticles";
 class Article extends Component {
   state = { article: {}, nextArticle: {}, previousArticle: {}, dummyText: "" };
 
-  componentDidMount() {
-    //this.populateArticle();
-  }
   setCommentAreaRef = (element) => {
     this.toCommentArea = element;
     this.scrollToBottom();
@@ -84,7 +81,7 @@ class Article extends Component {
               <header className="card-header text-center">
                 <div className="card-meta">
                   <TimeAgo className="timeago" datetime={article.postingDate} />
-                  &nbsp; in &nbsp;
+                  &nbsp;in&nbsp;
                   {article.tags.map((tag, index) => (
                     <div className="d-inline-block" key={tag._id}>
                       {index > 0 && ` | `}
@@ -100,7 +97,7 @@ class Article extends Component {
                     </div>
                   ))}
                 </div>
-                <h1 className="card-title">{article.title}</h1>
+                <h4 className="card-title">{article.title}</h4>
               </header>
               <img className="card-img" src={article.image} alt="" />
               <div className="card-body">

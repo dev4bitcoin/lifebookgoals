@@ -11,7 +11,7 @@ const Contact = () => {
             </header>
             <div className="card-body">
               <p>
-                If you have have any question or want to get in touch me. Use
+                If you have have any question or want to get in touch with me. Use
                 the following:
               </p>
               <p>

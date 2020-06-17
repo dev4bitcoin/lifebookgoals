@@ -62,6 +62,7 @@ class PostsByTag extends Component {
     if (!tag || !tag._id) {
       return;
     }
+    this.scrollToTop();
     const result = await getArticlesByTag(
       tag._id,
       this.state.currentPage,

@@ -34,7 +34,7 @@ class PopularStories extends Component {
                 className="timeago"
                 datetime={article.postingDate}
               ></TimeAgo>
-              &nbsp; in &nbsp;
+              &nbsp;in&nbsp;
               {article.tags.map((tag, index) => (
                 <Fragment key={tag._id}>
                   {index > 0 && ` | `}
